@@ -1,0 +1,181 @@
+:root {
+  --color: #ECC091;
+  --gray: #6A747E;
+  --dark: #222222;
+}
+
+.e-white {
+  background-color: #fff;
+}
+
+.t-white {
+  color: #fff;
+}
+
+.e-black {
+  background-color: #000;
+}
+
+.t-black {
+  color: #000;
+}
+
+.t-dark {
+  color: var(--dark);
+}
+
+.e-color {
+  background-color: var(--color);
+}
+
+.e-dark {
+  background-color: var(--dark);
+}
+
+.t-color {
+  color: var(--color);
+}
+
+.e-gray {
+  background-color: var(--gray);
+}
+
+.t-gray {
+  color: var(--gray);
+}
+
+.t-100 {
+  font-weight: 100;
+}
+
+.t-400 {
+  font-weight: 400;
+}
+
+.t-500 {
+  font-weight: 500;
+}
+
+.t-700 {
+  font-weight: 700;
+}
+
+.t-900 {
+  font-weight: 900;
+}
+
+.e-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.e-flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.e-flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.e-rel {
+  position: relative;
+}
+
+.e-abs {
+  position: absolute;
+}
+
+.e-fixed {
+  position: fixed;
+}
+
+.e-wp {
+  width: 100%;
+}
+
+.e-hp {
+  height: 100%;
+}
+
+.e-85 {
+  width: 85%;
+}
+
+.e-85w {
+  width: 85vw;
+}
+
+.e-wvw {
+  width: 100vw;
+}
+
+.e-hvh {
+  height: 100vh;
+}
+
+.e-dn {
+  display: none;
+}
+
+.e-img-fit {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.e-hidden {
+  overflow: hidden;
+}
+
+.e-curp {
+  cursor: pointer;
+}
+
+e-upper {
+  text-transform: uppercase;
+}
+
+button {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  border-spacing: 0;
+  color: #26589F;
+  outline: none;
+  padding: 0;
+}
+
+@media only screen and (min-width: 1025px) {
+  .e-mobile {
+    display: none;
+  }
+}
+/*# sourceMappingURL=alias-mixins.css.map */

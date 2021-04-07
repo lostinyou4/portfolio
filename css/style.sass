@@ -1,0 +1,84 @@
+.img-plx
+  width: 100%
+  height: 100%
+
+.main-section
+  position: relative
+  display: flex
+  flex-direction: row
+  width: 100vw
+  margin-bottom: 12%
+.txt-wrap
+  width: 60%
+.bg-wrap
+  width: 40%
+
+.hero-sec
+  .bg-wrap
+    position: relative
+    .bg-balloon
+      position: absolute
+      top: 28%
+      right: 18%
+
+.myinfo-sec
+  .bg-wrap
+    background: #99bfbf
+    .warped-img
+      position: relative
+      width: 280px
+      height: 417px
+      margin: 0 auto
+      transform: rotate(-30deg) skew(25deg) scale(.6)
+      transition: 0.5s
+      box-shadow: -70px 65px 30px 5px rgb(0 0 0 / 22%)
+      img
+        position: absolute
+        width: 100%
+        transition: 0.5s
+      &:hover
+        img:nth-child(4)
+          transform: translate(120px, -120px)
+          opacity: 1
+        img:nth-child(3)
+          transform: translate(80px, -80px)
+          opacity: .8
+        img:nth-child(2)
+          transform: translate(40px, -40px)
+          opacity: .6
+        img:nth-child(1)
+          opacity: .4
+          
+.pofol-sec
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  .bg-wrap
+    background: #babfbc
+    .scroll-anim-wrap
+      position: relative
+      overflow: hidden
+      width: 279px 
+      height: 574px
+      transform: rotateX(50deg) rotateZ(45deg) translate3d(0, 0, -70px) scale(0.7)
+      transform-style: preserve-3d
+      //box-shadow: 50px 50px 27px 0px rgb(0 0 0 / 30%)
+      img
+        position: absolute
+      .img-mockup
+        z-index: 99
+      .img-wrap
+        position: absolute
+        top: 70px
+        left: 20px
+        width: 246px
+        height: 432px
+      .img-pofol1
+        z-index: 9
+      .img-pofol2
+        z-index: 8
+      .img-pofol3
+        z-index: 7
+
+
