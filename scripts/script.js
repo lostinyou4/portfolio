@@ -1,3 +1,4 @@
+/* Text Animation */
 split = function(element){
   words = $(element).text().split('');
   for (i in words){
@@ -25,3 +26,7 @@ textify = function(element, method, delay){
 };
 textify('.hero-txt1', 'bounce', 500);
 textify('.hero-txt2', 'bounce', 1200);
+
+/* Image Animation */
+var balloon = new TimelineMax({ repeat: -1, yoyo: true});
+balloon.to('#layerBalloon', 4, {y:-30, ease:Power1.easeInOut});

@@ -23,13 +23,21 @@ body {
   width: 40%;
 }
 
+.hero-sec-fake {
+  display: none;
+}
+
 .hero-sec .bg-wrap {
   position: relative;
 }
 .hero-sec .bg-wrap .bg-balloon {
   position: absolute;
-  top: 28%;
+  top: 13%;
   right: 18%;
+  width: 200px;
+}
+.hero-sec .bg-wrap .bg-balloon img {
+  width: 100%;
 }
 .hero-sec .txt-wrap {
   display: flex;
