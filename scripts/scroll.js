@@ -5,10 +5,6 @@ tlFirstScroll
 .from('.img-pofol2', 8, {x: "101%", delay:5})
 .from('.img-pofol1', 10, {x: "101%", delay:20}) 
 
-var elemScroll = new TimelineMax();
-elemScroll
-.to('.bg-wrap', )
-
 var controller = new ScrollMagic.Controller();
 
 var scene1 = new ScrollMagic.Scene({

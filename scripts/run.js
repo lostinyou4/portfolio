@@ -182,7 +182,7 @@ window.addEventListener('scroll', function(event){
   var depth, i, layer, len, movement, topDistance, translate3d;
   topDistance = this.pageYOffset;
   layer = document.getElementById('layerBalloon');
-  depth = 0.4;
+  depth = 0.2;
   movement = -(topDistance * depth);
   translate3d = 'translate3d(0, ' + movement + 'px, 0)';
   layer.style.transform = translate3d;
