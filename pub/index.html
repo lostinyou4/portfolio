@@ -14,10 +14,7 @@
 <body>
 	<div data-scroll="data-scroll">
 		<div data-scroll-content="data-scroll-content">
-			<section class="main-section hero-sec-fake e-hvh">
-
-			</section>
-			<section class="main-section hero-sec e-hvh">
+			<section class="main-section hero-sec">
 				<div class="left-wrap txt-wrap">
 					<h1 class="hero-head">
 						<p class="hero-txt1">안녕하세요.</p>
@@ -25,16 +22,40 @@
 					</h1>
 				</div>
 				<div class="right-wrap bg-wrap e-flex">
-					<div class="img-plx e-hidden"><img class="img-load e-wp e-hp e-img-fit" src="../images/main/hero_bg.jpg" alt="" id="img_1">
+					<div class="pc-show">
+						<div class="img-plx e-hidden"><img class="img-load e-wp e-hp e-img-fit" src="../images/main/hero_bg.jpg" alt="" id="img_1">
+						</div>
+						<div class="bg-balloon" id="layerBalloon">
+							<img class="img-load" src="../images/main/hero_balloon.png" alt="">
+						</div>
 					</div>
-					<div class="bg-balloon" id="layerBalloon">
-						<img class="img-load" src="../images/main/hero_balloon.png" alt="">
+					<div class="mo-show">
+
 					</div>
 				</div>
 			</section>
-			<section class="main-section myinfo-sec e-hvh">
+			<section class="main-section myinfo-sec">
 				<div class="left-wrap txt-wrap">
-
+					<div class="myinfo-cont">
+						<h1>About Me</h1>
+						<dl>
+							<dt>Profile</dt>
+							<dd>이수민</dd>
+							<dd>1994.02.23</dd>
+							<dd>서울시 관악구 거주</dd>
+						</dl>
+						<dl>
+							<dt>History</dt>
+							<dd>2016 공주대학교 게임디자인학과 졸업</dd>
+							<dd>2018 그린컴퓨터학원 웹퍼블리셔 과정 수료</dd>
+							<dd>2019 ~ 현재 (주)미플즈 재직</dd>
+						</dl>
+						<dl>
+							<dt>License</dt>
+							<dd>정보처리기사</dd>
+							<dd>ICDL Master</dd>
+						</dl>
+					</div>
 				</div>
 				<div class="right-wrap bg-wrap e-flex">
 					<div class="img-wrap warped-img">
@@ -45,18 +66,28 @@
 					</div>
 				</div>
 			</section>
-			<section class="main-section pofol-sec e-hvh">
+			<section class="main-section pofol-sec">
 				<div class="left-wrap txt-wrap">
-
+					<div class="pofol-info">
+						웹퍼블리셔로서 첫 직장으로 에이전시에 입사해 여러 프로젝트 구축 및 유지보수를 하였습니다.<br>
+						많은 대기업 프로젝트를 접함으로서 다양한 UI 인터랙션과 기술을 접할 수 있었습니다.<br>
+						다양한 프로젝트를 접하는 것의 장점은 여러 언어, 클라우드, UI 개발툴 등을 
+						<br class="pc-show">
+						이용하면서 경험을 넓히고, 어느 업무에 투입되어도 빠르게 적응할 수 있다는 점입니다.<br>
+						저는 폭넓은 경험을 가진 전진하는 퍼블리셔입니다.
+					</div>
 				</div>
 				<div class="right-wrap bg-wrap e-flex">
-					<div class="scroll-anim-wrap">
+					<div class="scroll-anim-wrap pc-show">
 						<img class="img-load e-wp e-hp e-img-fit img-mockup" src="../images/main/pofol_mockup.png" alt="">
 						<div class="img-wrap">
 							<img class="img-load e-wp e-hp e-img-fit img-pofol1" src="../images/main/pofol_profile03.png" alt="">
 							<img class="img-load e-wp e-hp e-img-fit img-pofol2" src="../images/main/pofol_profile02.png" alt="">
 							<img class="img-load e-wp e-hp e-img-fit img-pofol3" src="../images/main/pofol_profile01.png" alt="">
 						</div>
+					</div>
+					<div class="mo-show">
+						<img src="../images/main/pofol_profile_mo.png" alt="">
 					</div>
 				</div>
 			</section>
