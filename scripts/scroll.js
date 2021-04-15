@@ -52,7 +52,7 @@ $(document).ready(function(){
     var sceneInfo3 = new ScrollMagic.Scene({
       triggerElement: '.myinfo-sec',
       triggerHook: 0,
-      duration: '80%'
+      duration: '100%'
     })
     .setTween(tlInfoScrollOut)
     .addTo(controller);
@@ -83,7 +83,7 @@ $(document).ready(function(){
 
     var scenePof2 = new ScrollMagic.Scene({
       triggerElement: '.pofol-sec',
-      triggerHook: '0.4',
+      triggerHook: '0.1',
       duration: '80%'
     })
     .setTween(tlPofolScrollIn)
@@ -123,7 +123,7 @@ $(document).ready(function(){
 
     var sceneList3 = new ScrollMagic.Scene({
       triggerElement: '.list-sec',
-      triggerHook: 0,
+      triggerHook: 1,
       duration: '100%'
     })
     .on('start', skillAnim)

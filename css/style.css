@@ -38,7 +38,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 .main-section .pc-show {
@@ -149,6 +149,7 @@ body {
   padding-bottom: 10px;
   font-size: 1.3rem;
   font-weight: 800;
+  color: #639fa6;
 }
 .myinfo-sec .txt-wrap dl dd {
   padding: 5px 0;
@@ -206,14 +207,14 @@ body {
   flex-direction: column;
   align-items: flex-start;
   font-weight: 300;
-  font-size: 1.2rem;
-  line-height: 2.8;
+  font-size: 1.1rem;
+  line-height: 2.2;
   letter-spacing: 0.07em;
   word-break: keep-all;
-  text-shadow: 0 0 2px #CEC9C9, 0 0 20px rgba(206, 201, 201, 0.1);
 }
 .pofol-sec .txt-wrap .pofol-info {
   padding-left: 15%;
+  padding-top: 12%;
   opacity: 0;
 }
 
@@ -246,12 +247,12 @@ body {
   padding-bottom: 20px;
 }
 .skill-sec .skill-cont-wrap .dev-wrap .skills-bar-cont li .bar-tit {
-  padding-bottom: 5px;
+  padding-bottom: 8px;
 }
 .skill-sec .skill-cont-wrap .dev-wrap .skills-bar-cont li .bar-cont {
   position: relative;
   width: 100%;
-  height: 10px;
+  height: 13px;
   background: #c0e4e4;
 }
 .skill-sec .skill-cont-wrap .dev-wrap .skills-bar-cont li .bar-cont span {
@@ -288,6 +289,11 @@ body {
   margin-right: 10px;
 }
 
+.list-sec {
+  height: auto;
+  padding: 140px 0;
+  background: #fff;
+}
 .list-sec .wrap {
   width: 100%;
   margin: 0 auto;
