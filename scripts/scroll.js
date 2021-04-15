@@ -17,7 +17,7 @@ $(document).ready(function(){
     var sceneHero = new ScrollMagic.Scene({
       triggerElement: '.hero-sec',
       triggerHook: 0,
-      duration: '70%'
+      duration: '80%'
     })
     .setTween(tlHeroScrollOut)
     .addTo(controller);
@@ -43,7 +43,7 @@ $(document).ready(function(){
     var sceneInfo2 = new ScrollMagic.Scene({
       triggerElement: '.myinfo-sec',
       triggerHook: '0.4',
-      duration: '70%'
+      duration: '80%'
     })
     .setTween(tlInfoScrollIn)
     .addIndicators({name:"myinfoText"})
@@ -52,7 +52,7 @@ $(document).ready(function(){
     var sceneInfo3 = new ScrollMagic.Scene({
       triggerElement: '.myinfo-sec',
       triggerHook: 0,
-      duration: '70%'
+      duration: '80%'
     })
     .setTween(tlInfoScrollOut)
     .addTo(controller);
@@ -84,7 +84,7 @@ $(document).ready(function(){
     var scenePof2 = new ScrollMagic.Scene({
       triggerElement: '.pofol-sec',
       triggerHook: '0.4',
-      duration: '70%'
+      duration: '80%'
     })
     .setTween(tlPofolScrollIn)
     .addIndicators({name:"pofolText"})
@@ -98,11 +98,62 @@ $(document).ready(function(){
     .setTween(tlPofolScroll)
     .setPin('.pofol-sec')
     .addTo(controller);
+
+    /* Skill */
+    var sceneSkill1 = new ScrollMagic.Scene({
+      triggerElement: '.skill-sec',
+      triggerHook: 'onEnter',
+      duration: '100%'
+    })
+    .setPin('.pofol-sec',{
+      pushFollowers:false
+    })
+    .addTo(controller);
+
+    /* List */
+    var sceneList1 = new ScrollMagic.Scene({
+      triggerElement: '.list-sec',
+      triggerHook: 'onEnter',
+      duration: '100%'
+    })
+    .setPin('.skill-sec',{
+      pushFollowers:false
+    })
+    .addTo(controller);
+
+    var sceneList3 = new ScrollMagic.Scene({
+      triggerElement: '.list-sec',
+      triggerHook: 0,
+      duration: '100%'
+    })
+    .on('start', skillAnim)
+    .addTo(controller);
   }
 
   if(!moSize){
     initScrollmagic();
   }
+
+function skillAnim(){
+  document.querySelectorAll('.skills-bar-cont li').forEach((el) => {
+    console.log("scroll");
+      let barCont = el.querySelector('.bar-cont');
+      let dataPer = parseInt(barCont.getAttribute('data-percent'));
+      let elem = el.querySelector('.progress-bar');
+      let width = 0;
+
+      let id = setInterval(frame, 15);
+
+      function frame(){
+          if(width >= dataPer){
+              clearInterval(id);
+          }else{
+              width++;
+              elem.style.width = width + "%";
+          }
+      }
+  });
+}
 
   $(window).resize( function() {
 		var wWidth = $(window).width();

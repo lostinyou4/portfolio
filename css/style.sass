@@ -1,4 +1,23 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css)
+$main-color: #639fa6
+$text-color: #444
+$progressbar-bg: #c0e4e4
+$progressbar-color: #639fa6
+
+.clearfix
+  *zoom: 1
+.clearfix:after
+  content: ''
+  display: block
+  clear: both
+.left
+  float: left
+.right
+  float: right
+.lock
+  overflow: hidden
+
+
 body
   font-family: 'Nanum Myeongjo'
 
@@ -157,6 +176,164 @@ body
       padding-left: 15%
       opacity: 0
 
+.skill-sec
+  align-items: center
+  background: #fff
+  .skill-cont-wrap
+    padding: 0 50px
+    margin: 0 auto
+    width: 100%
+    max-width: 1100px
+    box-sizing: border-box
+    .dev-wrap
+      width: 50%
+      h1
+        padding-bottom: 20px
+        font-weight: 600
+        font-size: 2em
+        text-align: center
+      .skills-bar-cont
+        position: relative
+        width: 100%
+        li
+          width: 100%
+          padding-bottom: 20px
+          .bar-tit
+            padding-bottom: 5px
+          .bar-cont
+            position: relative
+            width: 100%
+            height: 10px
+            background: $progressbar-bg
+            span
+              background: $progressbar-color
+              position: absolute
+              width: 0%
+              height: 100%
+    .extra-skills-wrap
+        width: 50%
+        padding-top: 40px
+        .extra-skills
+          position: relative
+          width: 70%
+          margin:0 auto
+          padding-bottom: 40px
+          text-align: center
+          h2
+            padding-bottom: 30px
+            font-weight: 600
+            font-size: 1.7em
+          ul
+            li
+              padding-bottom: 13px
+              font-weight: 500
+              font-size: 1.1em
+              color: $text-color
+              text-align: left
+              i
+                color: $main-color
+                margin-right: 10px
+
+.list-sec
+  .wrap
+    width: 100%
+    margin: 0 auto
+    max-width: 1280px
+    img
+      width: 100%
+      vertical-align: top
+    h1
+      display: inline-block
+      font-size: 50px
+      margin: 50px 0
+      border-bottom: 3px solid #000
+    ul
+      width: 100%
+      margin-left:3.3%
+      li
+        float: left
+        position: relative
+        overflow: hidden
+        width: 30%
+        margin-right: 3.3%
+        margin-bottom: 3.3%
+        background: #000
+        color: #fff
+        text-align: center
+        img
+          opacity: 1
+          -webkit-transition: opacity 0.35s
+          transition: opacity 0.35s
+        .caption
+          position: absolute
+          bottom: 0
+          left: 0
+          padding: 6em 2em 0
+          width: 100%
+          height: 100%
+          &:before
+            content:''
+            position: absolute
+            top: 50%
+            bottom: 50%
+            right: 50px
+            left: 50px
+            border-top: 1px solid rgba(255, 255, 255, 0.8)
+            border-bottom: 1px solid rgba(255, 255, 255, 0.8)
+            background: #fff
+            opacity: 0
+            -webkit-transition: all 0.4s
+            transition: all 0.4s
+            -webkit-transition-delay: 0.6s
+            transition-delay: 0.6s
+          h2, p
+            margin: 0 0 5px
+            opacity: 0
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s
+            transition: opacity 0.35s, -webkit-transform 0.35s, -moz-transform 0.35s, -o-transform 0.35s, transform 0.35s
+          h2
+            font-size: 23px
+            padding-bottom: 15px
+            letter-spacing: 0.03em
+            -webkit-transform: translate3d(0%, 50%, 0)
+            transform: translate3d(0%, 50%, 0)
+            -webkit-transition-delay: 0.3s
+            transition-delay: 0.3s
+          p
+            -webkit-transition-delay: 0s
+            transition-delay: 0s
+          p + p
+            padding-top: 5px
+          a
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            position: absolute
+            color: #fff
+        &:hover
+          img
+            opacity: 0.35
+          .caption
+            &:before
+              background: rgba(255, 255, 255, 0)
+              top: 55px
+              bottom: 55px
+              opacity: 1
+              -webkit-transition-delay: 0s
+              transition-delay: 0s
+            p
+              opacity: 0.9
+              -webkit-transition-delay: 0.6s
+              transition-delay: 0.6s
+            h2
+              opacity: 1
+              -webkit-transform: translate3d(0%, 0%, 0)
+              transform: translate3d(0%, 0%, 0)
+              -webkit-transition-delay: 0.3s
+              transition-delay: 0.3s
+
 @media all and (max-width: 1700px)
   .pofol-sec
     .txt-wrap
@@ -182,6 +359,7 @@ body
       margin-left: 0
   
   .hero-sec
+    height: 100vh
     .txt-wrap
       .hero-head
         margin: 0
@@ -204,7 +382,7 @@ body
   .pofol-sec
     .txt-wrap
       font-size: 1rem
-      line-height: 1.7
+      line-height: 1.8
       br
         display: none
       .pofol-info
@@ -212,3 +390,22 @@ body
         padding: 30px 7%
         box-sizing: border-box
         opacity: 1
+
+  .skill-sec
+    .skill-cont-wrap
+      padding: 50px 20px
+      .dev-wrap, .extra-skills-wrap
+        width: 100%
+
+        .extra-skills
+          float: left
+          width: 50%
+
+@media all and (max-width: 1023px)
+  .skill-sec
+    .skill-cont-wrap
+        .dev-wrap, .extra-skills-wrap
+            .extra-skills
+                width: 100%
+                ul > li
+                  font-size: 1rem
