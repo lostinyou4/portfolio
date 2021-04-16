@@ -63,10 +63,11 @@ $(document).ready(function(){
     .to('.scroll-anim-wrap', 15, {transform: "rotateX(0) rotateZ(0) translate3d(0, 0, 0) scale(1)", ease:"power4.easeOut", delay:3})
     .from('.img-pofol2', 8, {x: "101%", delay:5})
     .from('.img-pofol1', 10, {x: "101%", delay:20})
+    .to('.pofol-info',12,{opacity: 0});
 
     var tlPofolScrollIn = new TimelineMax();
     tlPofolScrollIn
-    .fromTo('.pofol-info',1,{opacity:0},{opacity: 1});
+    .to('.pofol-info',1,{opacity: 1, ease:Power4.easeOut});
     var tlPofolScrollOut = new TimelineMax();
     tlPofolScrollOut
     .to('.pofol-info',1,{opacity: 0});
@@ -135,23 +136,23 @@ $(document).ready(function(){
   }
 
 function skillAnim(){
-  document.querySelectorAll('.skills-bar-cont li').forEach((el) => {
-    console.log("scroll");
-      let barCont = el.querySelector('.bar-cont');
-      let dataPer = parseInt(barCont.getAttribute('data-percent'));
-      let elem = el.querySelector('.progress-bar');
-      let width = 0;
+  var nodes = document.querySelectorAll('.skills-bar-cont li');
+  Array.prototype.forEach.call(nodes, function(el){
+    let barCont = el.querySelector('.bar-cont');
+    let dataPer = parseInt(barCont.getAttribute('data-percent'));
+    let elem = el.querySelector('.progress-bar');
+    let width = 0;
 
-      let id = setInterval(frame, 15);
+    let id = setInterval(frame, 15);
 
-      function frame(){
-          if(width >= dataPer){
-              clearInterval(id);
-          }else{
-              width++;
-              elem.style.width = width + "%";
-          }
-      }
+    function frame(){
+        if(width >= dataPer){
+            clearInterval(id);
+        }else{
+            width++;
+            elem.style.width = width + "%";
+        }
+    }
   });
 }
 
