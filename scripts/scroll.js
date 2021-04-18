@@ -46,7 +46,6 @@ $(document).ready(function(){
       duration: '80%'
     })
     .setTween(tlInfoScrollIn)
-    .addIndicators({name:"myinfoText"})
     .addTo(controller);
 
     var sceneInfo3 = new ScrollMagic.Scene({
@@ -88,7 +87,6 @@ $(document).ready(function(){
       duration: '80%'
     })
     .setTween(tlPofolScrollIn)
-    .addIndicators({name:"pofolText"})
     .addTo(controller);
 
     var scenePof3 = new ScrollMagic.Scene({
@@ -163,7 +161,7 @@ function skillAnim(){
 				// completely destroy the controller
 				controller = controller.destroy( true );
 				// if needed, use jQuery to manually remove styles added to DOM elements by GSAP etc. here
-        $("[style]").removeAttr("style");
+        $("section *[style]").removeAttr("style");
 			}
 		} else if( wWidth >= maxWidth ) {
 			if( controller === null || controller === undefined ) {

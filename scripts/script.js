@@ -30,3 +30,18 @@ textify('.hero-txt2', 'bounce', 1200);
 /* Image Animation */
 var balloon = new TimelineMax({ repeat: -1, yoyo: true});
 balloon.to('#layerBalloon', 4, {y:-30, ease:Power1.easeInOut});
+
+/* portfolio section */
+var tabElements =  document.getElementsByClassName('tab-nav');
+var closeElements = document.getElementsByClassName('btn-close');
+for(var i = 0; i< tabElements.length; i++){
+    tabElements[i].addEventListener('click', function(){
+        var tabNum = '#' + this.getAttribute('data-pop');
+        document.querySelector(tabNum).style.display = 'block';
+        document.body.classList.add('lock');
+     });
+     closeElements[i].addEventListener('click', function(){
+        this.parentElement.parentElement.parentElement.style.display = 'none';
+        document.body.classList.remove('lock');
+    });
+}
