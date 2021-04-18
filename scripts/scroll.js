@@ -62,7 +62,7 @@ $(document).ready(function(){
     .to('.scroll-anim-wrap', 15, {transform: "rotateX(0) rotateZ(0) translate3d(0, 0, 0) scale(1)", ease:"power4.easeOut", delay:3})
     .from('.img-pofol2', 8, {x: "101%", delay:5})
     .from('.img-pofol1', 10, {x: "101%", delay:20})
-    .to('.pofol-info',12,{opacity: 0});
+    .to('.pofol-info',15,{opacity: 0});
 
     var tlPofolScrollIn = new TimelineMax();
     tlPofolScrollIn

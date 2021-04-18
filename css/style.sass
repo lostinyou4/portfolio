@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css)
 $main-color: #639fa6
 $text-color: #444
 $progressbar-bg: #c0e4e4
@@ -24,7 +23,7 @@ img
 
 
 body
-  font-family: 'Nanum Myeongjo'
+  font-family: 'AritaBuri', Batang, Serif
 
 .img-plx
   width: 100%
@@ -124,7 +123,7 @@ body
       dt
         padding-bottom: 10px
         font-size: 1.3rem
-        font-weight: 800
+        font-weight: 700
         color: #639fa6
       dd
         padding: 5px 0
@@ -170,14 +169,14 @@ body
     justify-content: center
     flex-direction: column
     align-items: flex-start
-    font-weight:300
+    font-weight: 100
     font-size: 1.1rem
     line-height: 2.2
     letter-spacing: 0.07em
     word-break: keep-all
     .pofol-info
       padding-left: 15%
-      padding-top: 12%
+      padding-top: 15%
       opacity: 0
 
 .skill-sec
@@ -193,7 +192,7 @@ body
       width: 50%
       h1
         padding-bottom: 20px
-        font-weight: 600
+        font-weight: 700
         font-size: 2em
         text-align: center
       .skills-bar-cont
@@ -236,12 +235,11 @@ body
           text-align: center
           h2
             padding-bottom: 30px
-            font-weight: 600
+            font-weight: 700
             font-size: 1.7em
           ul
             li
               padding-bottom: 13px
-              font-weight: 500
               font-size: 1.1em
               color: $text-color
               text-align: left
@@ -370,13 +368,12 @@ body
     width: 100%
     max-width: 1280px
     margin: 0 auto
-    img
-      margin-top: 30px
   h3
     font-weight: 700
     font-size: 40px
     color: #fff
     text-align: center
+    line-height: 1.3
   .bg-box
     width: 100%
     height: 470px
@@ -407,7 +404,7 @@ body
       border-right: 1px solid #eaeaea
       box-sizing: border-box
       h4
-        font-weight: 700
+        font-weight: 900
         font-size: 36px
         line-height: 1.3
         letter-spacing: 0.03em
@@ -415,7 +412,7 @@ body
       dl
         dt
           padding-bottom: 17px
-          font-weight: 800
+          font-weight: 700
           font-size: 18px
         dd
           font-size: 14px
@@ -424,6 +421,9 @@ body
         padding-top: 50px
     & > li:first-child
       border-left: 1px solid #eaeaea
+  .img-wrap
+    img
+     margin-top: 30px
 
 #skWeb
   .bg-box
@@ -459,7 +459,7 @@ body
       margin-left: 0
 
   .hero-sec
-    height: 100vh
+    height: 750px
     .txt-wrap
       .hero-head
         margin: 0
@@ -541,6 +541,9 @@ body
         border-bottom: none
 
 @media all and (max-width: 660px)
+  .hero-sec
+    height: 100vh
+
   .list-sec
     .wrap
       ul

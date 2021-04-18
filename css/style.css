@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 img {
   width: 100%;
   vertical-align: top;
@@ -31,7 +30,7 @@ img {
 }
 
 body {
-  font-family: "Nanum Myeongjo";
+  font-family: "AritaBuri", Batang, Serif;
 }
 
 .img-plx {
@@ -155,7 +154,7 @@ body {
 .myinfo-sec .txt-wrap dl dt {
   padding-bottom: 10px;
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #639fa6;
 }
 .myinfo-sec .txt-wrap dl dd {
@@ -213,7 +212,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 1.1rem;
   line-height: 2.2;
   letter-spacing: 0.07em;
@@ -221,7 +220,7 @@ body {
 }
 .pofol-sec .txt-wrap .pofol-info {
   padding-left: 15%;
-  padding-top: 12%;
+  padding-top: 15%;
   opacity: 0;
 }
 
@@ -241,7 +240,7 @@ body {
 }
 .skill-sec .skill-cont-wrap .dev-wrap h1 {
   padding-bottom: 20px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2em;
   text-align: center;
 }
@@ -298,12 +297,11 @@ body {
 }
 .skill-sec .skill-cont-wrap .extra-skills-wrap .extra-skills h2 {
   padding-bottom: 30px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.7em;
 }
 .skill-sec .skill-cont-wrap .extra-skills-wrap .extra-skills ul li {
   padding-bottom: 13px;
-  font-weight: 500;
   font-size: 1.1em;
   color: #444;
   text-align: left;
@@ -452,14 +450,12 @@ body {
   max-width: 1280px;
   margin: 0 auto;
 }
-.pop-detail .wrap img {
-  margin-top: 30px;
-}
 .pop-detail h3 {
   font-weight: 700;
   font-size: 40px;
   color: #fff;
   text-align: center;
+  line-height: 1.3;
 }
 .pop-detail .bg-box {
   width: 100%;
@@ -495,7 +491,7 @@ body {
   box-sizing: border-box;
 }
 .pop-detail .project-sum > li h4 {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 36px;
   line-height: 1.3;
   letter-spacing: 0.03em;
@@ -503,7 +499,7 @@ body {
 }
 .pop-detail .project-sum > li dl dt {
   padding-bottom: 17px;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 18px;
 }
 .pop-detail .project-sum > li dl dd {
@@ -515,6 +511,9 @@ body {
 }
 .pop-detail .project-sum > li:first-child {
   border-left: 1px solid #eaeaea;
+}
+.pop-detail .img-wrap img {
+  margin-top: 30px;
 }
 
 #skWeb .bg-box {
@@ -558,7 +557,7 @@ body {
   }
 
   .hero-sec {
-    height: 100vh;
+    height: 750px;
   }
   .hero-sec .txt-wrap .hero-head {
     margin: 0;
@@ -654,6 +653,10 @@ body {
   }
 }
 @media all and (max-width: 660px) {
+  .hero-sec {
+    height: 100vh;
+  }
+
   .list-sec .wrap ul {
     width: 100%;
     margin-left: 0;
