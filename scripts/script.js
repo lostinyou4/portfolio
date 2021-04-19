@@ -45,3 +45,7 @@ for(var i = 0; i< tabElements.length; i++){
         document.body.classList.remove('lock');
     });
 }
+
+$(document).ready(function() {
+  $("html, .pop-detail").niceScroll({cursorcolor:"#0D2040"});
+});

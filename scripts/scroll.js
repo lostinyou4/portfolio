@@ -60,8 +60,8 @@ $(document).ready(function(){
     var tlPofolScroll = new TimelineMax();
     tlPofolScroll
     .to('.scroll-anim-wrap', 15, {transform: "rotateX(0) rotateZ(0) translate3d(0, 0, 0) scale(1)", ease:"power4.easeOut", delay:3})
-    .from('.img-pofol2', 8, {x: "101%", delay:5})
-    .from('.img-pofol1', 10, {x: "101%", delay:20})
+    .from('.img-pofol2', 8, {x: "101%", delay:5, ease:"power1.easeIn"})
+    .from('.img-pofol1', 10, {x: "101%", delay:20, ease:"power1.easeIn"})
     .to('.pofol-info',15,{opacity: 0});
 
     var tlPofolScrollIn = new TimelineMax();
