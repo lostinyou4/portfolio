@@ -1,3 +1,8 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 img {
   width: 100%;
   vertical-align: top;
@@ -89,7 +94,7 @@ body {
   align-items: center;
 }
 .hero-sec .txt-wrap .hero-head {
-  padding-left: 15%;
+  padding-left: 13%;
   margin: 0;
   font-size: 48px;
 }
@@ -141,9 +146,21 @@ body {
 .myinfo-sec .txt-wrap h1 {
   display: inline-block;
   font-size: 50px;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
   margin: 30px 0;
   border-bottom: 3px solid #000;
+}
+.myinfo-sec .txt-wrap h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  transform: translateX(-50%);
+  opacity: 0.7;
 }
 .myinfo-sec .txt-wrap p {
   font-size: 20px;
@@ -268,10 +285,10 @@ body {
   height: 100%;
 }
 .skill-sec .skill-cont-wrap .dev-wrap .skills-bar-cont li:nth-child(1) .bar-cont span {
-  width: 95%;
+  width: 90%;
 }
 .skill-sec .skill-cont-wrap .dev-wrap .skills-bar-cont li:nth-child(2) .bar-cont span {
-  width: 85%;
+  width: 70%;
 }
 .skill-sec .skill-cont-wrap .dev-wrap .skills-bar-cont li:nth-child(3) .bar-cont span {
   width: 65%;
@@ -280,10 +297,10 @@ body {
   width: 60%;
 }
 .skill-sec .skill-cont-wrap .dev-wrap .skills-bar-cont li:nth-child(5) .bar-cont span {
-  width: 55%;
+  width: 35%;
 }
 .skill-sec .skill-cont-wrap .dev-wrap .skills-bar-cont li:nth-child(6) .bar-cont span {
-  width: 15%;
+  width: 10%;
 }
 .skill-sec .skill-cont-wrap .extra-skills-wrap {
   width: 50%;
@@ -329,6 +346,7 @@ body {
 .list-sec .wrap h1 {
   display: inline-block;
   font-size: 50px;
+  padding-bottom: 10px;
   margin: 50px 0;
   border-bottom: 3px solid #000;
 }
@@ -432,6 +450,56 @@ body {
   transition-delay: 0.3s;
 }
 
+footer {
+  position: relative;
+  z-index: 9;
+  padding: 70px 0;
+  background: #262626;
+  color: #fff;
+  text-align: center;
+}
+footer h2 {
+  position: relative;
+  padding-bottom: 50px;
+  font-weight: 700;
+  font-size: 34px;
+}
+footer h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  transform: translateX(-50%);
+  opacity: 0.7;
+}
+footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 30px;
+  font-size: 1.2rem;
+}
+footer .social > li {
+  transition: color 0.2s;
+}
+footer .social > li i {
+  margin-right: 3px;
+}
+footer .social > li:hover {
+  color: #639fa6;
+}
+footer .social > li:not(:last-child) {
+  padding-right: 30px;
+}
+footer .copy-p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
 .pop-detail {
   display: none;
   position: fixed;
@@ -512,6 +580,9 @@ body {
 .pop-detail .project-sum > li:first-child {
   border-left: 1px solid #eaeaea;
 }
+.pop-detail .img-wrap {
+  padding-bottom: 150px;
+}
 .pop-detail .img-wrap img {
   margin-top: 30px;
 }
@@ -523,6 +594,16 @@ body {
 
 #skMobile .bg-box {
   background: url("../images/main/detail/skM_bg.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+#medibeu .bg-box {
+  background: url("../images/main/detail/medibeu_bg.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+#skt .bg-box {
+  background: url("../images/main/detail/skt_bg2.jpg") 0 0 no-repeat;
   background-size: cover;
 }
 
@@ -680,6 +761,13 @@ body {
   }
   .pop-detail .project-sum > li h4 {
     font-size: 24px;
+  }
+
+  footer .social {
+    flex-direction: column;
+  }
+  footer .social > li:not(last-child) {
+    padding-bottom: 12px;
   }
 }
 

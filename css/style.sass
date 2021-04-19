@@ -3,6 +3,9 @@ $text-color: #444
 $progressbar-bg: #c0e4e4
 $progressbar-color: #639fa6
 
+a
+  color: inherit
+  text-decoration: none
 img
   width: 100%
   vertical-align: top
@@ -69,7 +72,7 @@ body
     display: flex
     align-items: center
     .hero-head
-      padding-left: 15%
+      padding-left: 13%
       margin: 0
       font-size: 48px
       p
@@ -113,9 +116,20 @@ body
     h1
       display: inline-block
       font-size: 50px
-      padding-bottom: 8px
+      padding-bottom: 10px
       margin: 30px 0
       border-bottom:3px solid #000
+      &::after
+        content:''
+        display: block
+        position: absolute
+        left: 50%
+        bottom: 32px
+        width: 30px
+        height: 1px
+        background: #fff
+        transform: translateX(-50%)
+        opacity: 0.7
     p
       font-size: 20px
     dl
@@ -214,17 +228,17 @@ body
               width: 0%
               height: 100%
           &:nth-child(1) .bar-cont span
-            width: 95%
+            width: 90%
           &:nth-child(2) .bar-cont span
-            width: 85%
+            width: 70%
           &:nth-child(3) .bar-cont span
             width: 65%
           &:nth-child(4) .bar-cont span
             width: 60%
           &:nth-child(5) .bar-cont span
-            width: 55%
+            width: 35%
           &:nth-child(6) .bar-cont span
-            width: 15%
+            width: 10%
     .extra-skills-wrap
         width: 50%
         .extra-skills
@@ -262,6 +276,7 @@ body
     h1
       display: inline-block
       font-size: 50px
+      padding-bottom: 10px
       margin: 50px 0
       border-bottom: 3px solid #000
     ul
@@ -352,6 +367,48 @@ body
               -webkit-transition-delay: 0.3s
               transition-delay: 0.3s
 
+footer
+  position: relative
+  z-index: 9
+  padding: 70px 0
+  background: #262626
+  color: #fff
+  text-align: center
+  h2
+    position: relative
+    padding-bottom: 50px
+    font-weight: 700
+    font-size: 34px
+    &::after
+      content:''
+      display: block
+      position: absolute
+      left: 50%
+      bottom: 32px
+      width: 30px
+      height: 1px
+      background: #fff
+      transform: translateX(-50%)
+      opacity: 0.7
+  .social
+    display: flex
+    flex-direction: row
+    justify-content: center
+    padding-bottom: 30px
+    font-size: 1.2rem
+    & > li
+      transition: color 0.2s
+      i
+        margin-right: 3px
+    & > li:hover
+      color: #639fa6
+    & > li:not(:last-child)
+      padding-right: 30px
+  .copy-p
+    font-size: 0.9rem
+    opacity: 0.7
+
+
 .pop-detail
   display: none
   position: fixed
@@ -422,6 +479,7 @@ body
     & > li:first-child
       border-left: 1px solid #eaeaea
   .img-wrap
+    padding-bottom: 150px
     img
      margin-top: 30px
 
@@ -432,6 +490,14 @@ body
 #skMobile
   .bg-box
     background: url('../images/main/detail/skM_bg.jpg') 0 0 no-repeat
+    background-size: cover
+#medibeu
+  .bg-box
+    background: url('../images/main/detail/medibeu_bg.jpg') 0 0 no-repeat
+    background-size: cover
+#skt
+  .bg-box
+    background: url('../images/main/detail/skt_bg2.jpg') 0 0 no-repeat
     background-size: cover
 
 @media all and (max-width: 1700px)
@@ -567,3 +633,9 @@ body
     .project-sum > li
       h4
         font-size: 24px
+
+  footer .social
+    flex-direction: column
+    & > li:not(last-child)
+      padding-bottom: 12px
+
