@@ -65,10 +65,45 @@ body {
   width: 60%;
   height: 100vh;
 }
+.txt-wrap .mo-sec-head {
+  display: none;
+  position: absolute;
+  top: -20px;
+  left: 2%;
+  z-index: 9;
+  padding: 8px 15px;
+  background: #000;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  line-height: 1;
+}
 
 .bg-wrap {
   margin-left: 60%;
   width: 40%;
+}
+
+.space-sm {
+  display: block;
+  width: 100%;
+  height: 20px;
+}
+
+.slide-tit-head {
+  position: absolute;
+  left: -32px;
+  top: 8%;
+  height: 107px;
+  font-weight: 900;
+  font-size: 92px;
+  color: #e0e0e0;
+  overflow: hidden;
+  line-height: 120px;
+}
+.slide-tit-head p {
+  font-size: inherit;
+  opacity: 0;
 }
 
 .hero-sec .bg-wrap {
@@ -76,7 +111,7 @@ body {
 }
 .hero-sec .bg-wrap .mo-show {
   width: 100%;
-  height: 380px;
+  height: 355px;
   background: url("../images/main/hero_bg_mo.jpg") center no-repeat;
   background-size: cover;
 }
@@ -96,7 +131,7 @@ body {
 .hero-sec .txt-wrap .hero-head {
   padding-left: 13%;
   margin: 0;
-  font-size: 48px;
+  font-size: 41px;
 }
 .hero-sec .txt-wrap .hero-head p {
   padding: 12px 0;
@@ -135,32 +170,14 @@ body {
 }
 .myinfo-sec .txt-wrap {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
   align-items: flex-start;
 }
 .myinfo-sec .txt-wrap .myinfo-cont {
   padding-left: 15%;
+  padding-bottom: 5%;
   opacity: 0;
-}
-.myinfo-sec .txt-wrap h1 {
-  display: inline-block;
-  font-size: 50px;
-  padding-bottom: 10px;
-  margin: 30px 0;
-  border-bottom: 3px solid #000;
-}
-.myinfo-sec .txt-wrap h1::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 50%;
-  bottom: 32px;
-  width: 30px;
-  height: 1px;
-  background: #fff;
-  transform: translateX(-50%);
-  opacity: 0.7;
 }
 .myinfo-sec .txt-wrap p {
   font-size: 20px;
@@ -169,13 +186,31 @@ body {
   padding-bottom: 20px;
 }
 .myinfo-sec .txt-wrap dl dt {
-  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 10px;
   font-size: 1.3rem;
   font-weight: 700;
   color: #639fa6;
 }
+.myinfo-sec .txt-wrap dl dt::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 90px;
+  width: 100%;
+  height: 1px;
+  background: #639fa6;
+}
 .myinfo-sec .txt-wrap dl dd {
   padding: 5px 0;
+}
+.myinfo-sec .txt-wrap dl dd b {
+  display: inline-block;
+  min-width: 90px;
+  font-weight: 800;
+}
+.myinfo-sec .txt-wrap dl dd strong {
+  font-weight: 800;
 }
 
 .pofol-sec {
@@ -231,7 +266,7 @@ body {
   align-items: flex-start;
   font-weight: 400;
   font-size: 1.1rem;
-  line-height: 2.4;
+  line-height: 1.5;
   letter-spacing: 0.07em;
   word-break: keep-all;
 }
@@ -254,9 +289,10 @@ body {
 }
 .skill-sec .skill-cont-wrap .dev-wrap {
   width: 50%;
+  padding-bottom: 50px;
 }
 .skill-sec .skill-cont-wrap .dev-wrap h1 {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   font-weight: 700;
   font-size: 2em;
   text-align: center;
@@ -370,6 +406,26 @@ body {
   -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
 }
+.list-sec .wrap ul li .mo-pofol-tit {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  margin-left: 7%;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+}
+.list-sec .wrap ul li .mo-pofol-tit:before {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 3px;
+  margin-right: 8px;
+  background: #000;
+  vertical-align: top;
+}
 .list-sec .wrap ul li .caption {
   position: absolute;
   bottom: 0;
@@ -480,6 +536,7 @@ footer .social {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-right: 40px;
   padding-bottom: 30px;
   font-size: 1.2rem;
 }
@@ -487,7 +544,9 @@ footer .social > li {
   transition: color 0.2s;
 }
 footer .social > li i {
+  width: 22px;
   margin-right: 3px;
+  text-align: center;
 }
 footer .social > li:hover {
   color: #639fa6;
@@ -525,6 +584,23 @@ footer .copy-p {
   text-align: center;
   line-height: 1.3;
 }
+.pop-detail .fix-cont {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.pop-detail .fix-cont .btn-close {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 15px;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
 .pop-detail .bg-box {
   width: 100%;
   height: 470px;
@@ -538,14 +614,6 @@ footer .copy-p {
   height: 100%;
   justify-content: center;
   align-items: center;
-}
-.pop-detail .bg-box .wrap .btn-close {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
 }
 .pop-detail .project-sum {
   display: flex;
@@ -589,8 +657,8 @@ footer .copy-p {
 .pop-detail .project-sum > li .btn-gosite:hover {
   color: #639fa6;
 }
-.pop-detail .project-sum > li:first-child {
-  border-left: 1px solid #eaeaea;
+.pop-detail .project-sum > li:last-child {
+  border-right: none;
 }
 .pop-detail .img-wrap {
   padding-bottom: 150px;
@@ -641,9 +709,12 @@ footer .copy-p {
   }
   .main-section .txt-wrap {
     order: 2;
-    position: static;
+    position: relative;
     width: 100%;
     height: auto;
+  }
+  .main-section .txt-wrap .mo-sec-head {
+    display: block;
   }
   .main-section .bg-wrap {
     order: 1;
@@ -656,7 +727,7 @@ footer .copy-p {
   }
   .hero-sec .txt-wrap .hero-head {
     margin: 0;
-    padding: 35px 0 0 5%;
+    padding: 50px 0 0 5%;
     font-size: 26px;
   }
 
@@ -668,7 +739,7 @@ footer .copy-p {
     font-size: 42px;
   }
   .myinfo-sec .txt-wrap .myinfo-cont {
-    padding: 20px 0 20px 5%;
+    padding: 38px 0 20px 5%;
     font-size: 0.9rem;
     opacity: 1;
   }
@@ -682,7 +753,7 @@ footer .copy-p {
   }
   .pofol-sec .txt-wrap .pofol-info {
     width: 100%;
-    padding: 30px 5%;
+    padding: 42px 5%;
     box-sizing: border-box;
     opacity: 1;
   }
@@ -718,6 +789,9 @@ footer .copy-p {
   }
   .list-sec .wrap ul li .caption h2 {
     font-size: 20px;
+  }
+  .list-sec .wrap ul li .mo-pofol-tit {
+    display: block;
   }
 
   .pop-detail h3 {
@@ -764,6 +838,16 @@ footer .copy-p {
   .pop-detail h3 {
     font-size: 26px;
   }
+  .pop-detail .fix-cont {
+    z-index: 99;
+  }
+  .pop-detail .fix-cont .btn-close {
+    right: 10px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+  }
   .pop-detail .bg-box {
     height: 180px;
   }
@@ -779,6 +863,11 @@ footer .copy-p {
 
   footer .social {
     flex-direction: column;
+    width: 270px;
+    margin: 0 auto;
+    padding-left: 55px;
+    padding-right: 0;
+    text-align: left;
   }
   footer .social > li:not(last-child) {
     padding-bottom: 12px;

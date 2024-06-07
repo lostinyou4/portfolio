@@ -8,6 +8,9 @@ $(document).ready(function(){
 
   function initScrollmagic(){
     $('body').scrollTop( 0 );
+    var tlTitScrollIn = new TimelineMax();
+    tlTitScrollIn
+    .fromTo('.slide-tit01',1,{opacity:0},{opacity: 1})
     controller = new ScrollMagic.Controller();
     /* Hero */
     var tlHeroScrollOut = new TimelineMax();
@@ -22,14 +25,20 @@ $(document).ready(function(){
     .setTween(tlHeroScrollOut)
     .addTo(controller);
 
+    /*
+      scrollIn - 텍스트 0 > 100
+      scrollOut - 텍스트 100 > 0
+                                */
     /* Info */
     var tlInfoScrollIn = new TimelineMax();
     tlInfoScrollIn
+    .to('.slide-tit01',0.5,{y: -120})
     .fromTo('.myinfo-cont',1,{opacity:0},{opacity: 1, ease:Power4.easeOut});
     var tlInfoScrollOut = new TimelineMax();
     tlInfoScrollOut
     .to('.myinfo-cont',1,{opacity: 0});
 
+    //스티키
     var sceneInfo1 = new ScrollMagic.Scene({
       triggerElement: '.myinfo-sec',
       triggerHook: 'onEnter',
@@ -43,17 +52,17 @@ $(document).ready(function(){
     var sceneInfo2 = new ScrollMagic.Scene({
       triggerElement: '.myinfo-sec',
       triggerHook: '0.4',
-      duration: '80%'
+      duration: '60%'
     })
     .setTween(tlInfoScrollIn)
     .addTo(controller);
 
     var sceneInfo3 = new ScrollMagic.Scene({
       triggerElement: '.myinfo-sec',
-      triggerHook: 0,
+      triggerHook: '0',
       duration: '100%'
     })
-    .setTween(tlInfoScrollOut)
+    .setPin('.myinfo-sec')
     .addTo(controller);
 
     /* Portfolio - brief */
@@ -62,18 +71,30 @@ $(document).ready(function(){
     .to('.scroll-anim-wrap', 15, {transform: "rotateX(0) rotateZ(0) translate3d(0, 0, 0) scale(1)", ease:"power4.easeOut", delay:3})
     .from('.img-pofol2', 8, {x: "101%", delay:5, ease:"power1.easeIn"})
     .from('.img-pofol1', 10, {x: "101%", delay:20, ease:"power1.easeIn"})
-    .to('.pofol-info',15,{opacity: 0});
+    .to('.pofol-info',15,{opacity: 0})
+    .to('.slide-tit01',15,{opacity: 0}, "-=15");
 
     var tlPofolScrollIn = new TimelineMax();
     tlPofolScrollIn
-    .to('.pofol-info',1,{opacity: 1, ease:Power4.easeOut});
+    .to('.slide-tit01',1,{y: -240})
+    .to('.pofol-info',1,{opacity: 1, delay:1, ease:Power4.easeOut}, "-=1");
+
     var tlPofolScrollOut = new TimelineMax();
     tlPofolScrollOut
     .to('.pofol-info',1,{opacity: 0});
 
-    var scenePof1 = new ScrollMagic.Scene({
+    var scenePofDelay = new ScrollMagic.Scene({
       triggerElement: '.pofol-sec',
       triggerHook: 'onEnter',
+      duration: '300'
+    })
+    .setTween(tlInfoScrollOut)
+    .addTo(controller);
+
+    //스티키
+    var scenePof1 = new ScrollMagic.Scene({
+      triggerElement: '.pofol-sec',
+      triggerHook: '0.9',
       duration: '100%'
     })
     .setPin('.myinfo-sec',{
@@ -88,7 +109,7 @@ $(document).ready(function(){
     })
     .setTween(tlPofolScrollIn)
     .addTo(controller);
-
+    //텍스트페이드아웃 & 이미지애니메이션
     var scenePof3 = new ScrollMagic.Scene({
       triggerElement: '.pofol-sec',
       triggerHook: 0,

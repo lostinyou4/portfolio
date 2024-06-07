@@ -26,6 +26,7 @@ textify = function(element, method, delay){
 };
 textify('.hero-txt1', 'bounce', 500);
 textify('.hero-txt2', 'bounce', 1200);
+textify('.hero-txt3', 'bounce', 1900);
 
 /* Image Animation */
 var balloon = new TimelineMax({ repeat: -1, yoyo: true});
