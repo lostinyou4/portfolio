@@ -2,6 +2,10 @@ $main-color: #639fa6
 $text-color: #444
 $progressbar-bg: #c0e4e4
 $progressbar-color: #639fa6
+$ari-font: 'AritaBuri'
+
+*
+  box-sizing: border-box
 
 a
   color: inherit
@@ -23,10 +27,13 @@ img
   overflow: hidden
 .active
   display: block
+.text-center
+  text-align: center
 
 
 body
-  font-family: 'AritaBuri', Batang, Serif
+  font-family: 'Pretendard', Batang, Serif
+  line-height: 1.2
 
 .img-plx
   width: 100%
@@ -73,7 +80,7 @@ body
 .slide-tit-head
   position: absolute
   left: -32px
-  top: 8%
+  top: 6%
   height: 107px
   font-weight: 900
   font-size: 92px
@@ -81,6 +88,7 @@ body
   overflow: hidden
   line-height: 120px
   p
+    font-family: $ari-font
     font-size: inherit
     opacity: 0
 
@@ -104,10 +112,12 @@ body
     align-items: center
     .hero-head
       padding-left: 13%
+      padding-right: 5px
       margin: 0
       font-size: 41px
+      word-break: keep-all
       p
-        padding: 12px 0
+        padding: 8px 0
 
 
 .myinfo-sec
@@ -143,24 +153,24 @@ body
     align-items: flex-start
     .myinfo-cont
       padding-left: 15%
-      padding-bottom: 5%
+      padding-bottom: 6%
       opacity: 0
     p
       font-size: 20px
     dl
-      padding-bottom: 20px
+      padding-bottom: 13px
       dt
         position: relative
-        margin-bottom: 10px
+        margin-bottom: 6px
         font-size: 1.3rem
         font-weight: 700
         color: #639fa6
         &::after
           content: ''
           position: absolute
-          top: 10px
+          top: 14px
           left: 90px
-          width: 100%
+          right: 0
           height: 1px
           background: #639fa6
 
@@ -171,7 +181,7 @@ body
           min-width: 90px
           font-weight: 800
         strong
-          font-weight: 800
+          font-weight: 600
 
 .pofol-sec
   top: 0
@@ -223,6 +233,7 @@ body
       padding-left: 15%
       padding-top: 15%
       opacity: 0
+      word-break: keep-all
 
 .skill-sec
   align-items: center
@@ -294,11 +305,13 @@ body
                 margin-right: 10px
 
 .list-sec
+  flex-direction: column
   height: auto
-  padding: 140px 0
+  padding-top: 20px
   background: #fff
   text-align: center
   .wrap
+    position: relative
     width: 100%
     margin: 0 auto
     max-width: 1280px
@@ -311,17 +324,17 @@ body
       padding-bottom: 10px
       margin: 50px 0
       border-bottom: 3px solid #000
-    ul
+    .port-list
       width: calc(100% - 3.3%)
       margin-left:3.3%
       li
         float: left
         position: relative
         overflow: hidden
-        width: 30%
+        width: 21.7%
         margin-right: 3.3%
         margin-bottom: 3.3%
-        background: #000
+        background: #f3f3f3
         color: #fff
         text-align: center
         img
@@ -350,10 +363,17 @@ body
           position: absolute
           bottom: 0
           left: 0
-          padding: 5.5em 1.3em 0
+          top: 0
+          bottom: 0
+          display: flex
+          align-items: center
+          justify-content: center
+          padding: 0 1.3em
           width: 100%
           height: 100%
           box-sizing: border-box
+          -webkit-transition: all 0.35s
+          transition: all 0.35s
           &:before
             content:''
             position: absolute
@@ -374,8 +394,7 @@ body
             -webkit-transition: opacity 0.35s, -webkit-transform 0.35s
             transition: opacity 0.35s, -webkit-transform 0.35s, -moz-transform 0.35s, -o-transform 0.35s, transform 0.35s
           h2
-            font-size: 23px
-            padding-bottom: 17px
+            font-size: 26px
             letter-spacing: 0.03em
             line-height: 1.5
             -webkit-transform: translate3d(0%, 50%, 0)
@@ -383,6 +402,8 @@ body
             -webkit-transition-delay: 0.3s
             transition-delay: 0.3s
           p
+            font-size: 20px
+            line-height: 1.6
             -webkit-transition-delay: 0s
             transition-delay: 0s
           p + p
@@ -399,6 +420,7 @@ body
           img
             opacity: 0.35
           .caption
+            background: rgba(0,0,0,0.7)
             &:before
               background: rgba(255, 255, 255, 0)
               top: 55px
@@ -416,6 +438,18 @@ body
               transform: translate3d(0%, 0%, 0)
               -webkit-transition-delay: 0.3s
               transition-delay: 0.3s
+
+.skill-desc
+  padding: 30px 10px 60px
+  li
+    padding: 8px 0
+    font-size: 17px
+    i
+      margin-right:  8px
+      color: $main-color
+    b
+      font-weight: 700
+
 
 footer
   position: relative
@@ -491,11 +525,12 @@ footer
     bottom: 0
     .btn-close
       position: fixed
+      z-index: 9
       right: 30px
       top: 30px
       display: inline-block
-      width: 25px
-      height: 25px
+      width: 45px
+      height: 45px
       padding: 15px
       border-radius: 100%
       background: rgba(255, 255, 255, 0.2)
@@ -571,6 +606,234 @@ footer
     background-position: center bottom
     background-size: cover
 
+.sa03-top
+  position: relative
+  overflow: hidden
+  padding: 50px 0 140px
+
+.sa03-tit
+  padding-top: 110px
+  line-height: 1.2
+
+  h2
+    display: inline-block
+    position: relative
+    font-weight: 700
+    font-size: 50px
+    color: #639fa6
+
+    &:before
+      content: ""
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 14px
+      height: 8px
+      background: #a1ffe5
+      mix-blend-mode: multiply
+
+.sa03-bg-txt
+  position: absolute
+  top: 238px
+  left: 28%
+  width: max-content
+  font-weight: 800
+  font-size: 250px
+  color: #f5f6f7
+  letter-spacing: -0.03em
+  line-height: 1
+  transition-timing-function: ease-in-out
+
+.sa03-bg
+  & + .wrap
+    z-index: 9
+  & > *
+    z-index: 1
+  .blob01
+    position: absolute
+    top: 415px
+    left: -290px
+    width: 350px
+    height: 389px
+    background: url("../images/main/sa03_blob01.png") no-repeat center
+    transition: all 2s cubic-bezier(0.13, 0.45, 0.34, 0.94)
+
+  .blob02
+    position: absolute
+    top: 553px
+    left: 1670px
+    width: 227px
+    height: 230px
+    background: url("../images/main/sa03_blob02.png") no-repeat center
+    transition: all 2s cubic-bezier(0.13, 0.45, 0.34, 0.94)
+
+  &.trigger0 .blob01
+    top: 145px
+    left: -280px
+
+  &.trigger1 .blob01
+    top: 663px
+    left: 335px
+
+  &.trigger2 .blob01
+    top: 1767px
+    left: 729px
+
+  &.trigger3 .blob01
+    top: 2884px
+    left: 46px
+
+  &.trigger0 .blob02
+    top: 553px
+    left: 1670px
+
+  &.trigger1 .blob02
+    top: 1093px
+    left: 1065px
+
+  &.trigger2 .blob02
+    top: 1691px
+    left: 1440px
+
+  &.trigger3 .blob02
+    top: 2700px
+    left: 980px
+
+.sa-vertical-trigger > li
+  position: absolute
+
+  &:nth-child(1)
+    top: 200px
+
+  &:nth-child(2)
+    top: 500px
+
+  &:nth-child(3)
+    top: 1150px
+
+  &:nth-child(4)
+    top: 1850px
+
+.sa03-pofol-wrap
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-top: 130px
+
+  > li
+    width: 33.33%
+    padding: 0 22px
+
+    &:nth-child(2)
+      margin-top: 200px
+
+    &:nth-child(3)
+      margin-top: 90px
+
+    > a
+      display: block
+
+      + a
+        margin-top: 45px
+
+    &:nth-child(3n-1)
+      margin-top: 58px
+
+    &:nth-child(3n)
+      margin-top: 118px
+
+  a
+    .img-wrap, .movie-wrap
+      width: 100%
+      height: 0
+      padding-bottom: 100%
+      overflow: hidden
+      position: relative
+      margin-bottom: 35px
+      border-radius: 30px
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+
+    .img-wrap:before, .movie-wrap:before
+      content: ""
+      left: 0
+      right: 0
+      top: 25px
+      height: 100%
+      position: absolute
+      z-index: 9
+      background: url("../images/main/sa03_icon_hover.png"), linear-gradient(to top, #00a299, transparent)
+      background-repeat: no-repeat
+      background-position: center
+      border-radius: 30px
+      opacity: 0
+      transition: all 0.2s ease
+
+    &:hover
+      .img-wrap:before, .movie-wrap:before
+        opacity: 1
+        top: 0
+
+    .movie-wrap video
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      width: 178%
+
+  li > a > dl
+    font-weight: 200
+    font-size: 17px
+    color: #2f2929
+
+    dt
+      margin-bottom: 10px
+      font-weight: 500
+      font-size: 25px
+
+    dd
+      letter-spacing: -0.03em
+
+#sbsgame
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_sbsg.png')
+#sbsart
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_sbsa.png')
+#drminish
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_drm.png')
+#skadmin
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_skm_w.png')
+#mns
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_minish.png')
+#sbswebtoon
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_sbsw.png')
+#allthat
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_atb.png')
+#grandeye
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_gge.png')
+#mdb
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_mdb.png')
+#koreaIt
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_ki.png')
+#kcook
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_kcook.png')
+#skApp
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_skm_m.png')
+#sktRecruit
+  .img-wrap
+    background-image: url('../images/main/thumbnail/thumbnail_skt.png')
+
 @media all and (max-width: 1700px)
   .pofol-sec
     .txt-wrap
@@ -597,6 +860,9 @@ footer
       width: 100%
       margin-left: 0
 
+  .slide-tit-head
+    display: none
+
   .hero-sec
     height: 750px
     .txt-wrap
@@ -608,8 +874,13 @@ footer
   .myinfo-sec
     .bg-wrap
       .warped-img
-        width: 207px
-        height: 320px
+        width: 116px
+        height: 177px
+        margin: 30px 0 50px
+        transform: rotate(-30deg) skew(25deg) scale(1)
+        box-shadow: -23px 35px 29px 2px rgba(0, 0, 0, 0.22)
+        &:hover img
+          transform: none !important
     .txt-wrap
       h1
         font-size: 42px
@@ -643,11 +914,10 @@ footer
             font-size: 1rem
 
   .list-sec
-    padding: 0 0 70px
     .wrap
       h1
         font-size: 42px
-      ul
+      .port-list
         width: calc(100% - 4%)
         margin-left: 4%
         li
@@ -679,6 +949,19 @@ footer
         border-left: none
       & > li:last-child
         border-bottom: none
+  
+  .sa03-top
+    padding-bottom: 70px
+
+  .sa03-pofol-wrap
+    > li
+      width: 50%
+      &:nth-child(2n)
+      margin-top: 58px
+
+      &:nth-child(2n+1)
+        margin-top: 118px
+  
 
 @media all and (max-width: 660px)
   .hero-sec
@@ -686,12 +969,17 @@ footer
 
   .list-sec
     .wrap
-      ul
+      .port-list
         width: 100%
         margin-left: 0
         li
           width: 92%
           margin: 0 4% 4%
+  
+  .skill-desc
+    > li
+      padding: 5px 0
+      font-size: 14px
 
   .pop-detail
     h3
@@ -701,8 +989,8 @@ footer
       .btn-close
         right: 10px
         top: 10px
-        width: 15px
-        height: 15px
+        width: 35px
+        height: 35px
         padding: 10px
     .bg-box
       height: 180px
@@ -715,12 +1003,24 @@ footer
     .project-sum > li
       h4
         font-size: 24px
+  
+  .sa03-tit
+    padding: 0
+    h2
+      font-size: 38px
+
+  .sa03-top
+    .sa03-pofol-wrap
+      margin-top: 20px
+      > li
+        width: 100%
+        margin-top: 60px
 
   footer .social
     flex-direction: column
     width: 270px
     margin: 0 auto
-    padding-left: 55px
+    padding-left: 8px
     padding-right: 0
     text-align: left
     & > li:not(last-child)

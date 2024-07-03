@@ -33,7 +33,7 @@ var balloon = new TimelineMax({ repeat: -1, yoyo: true});
 balloon.to('#layerBalloon', 4, {y:-30, ease:Power1.easeInOut});
 
 /* portfolio section */
-var tabElements =  document.getElementsByClassName('tab-nav');
+var tabElements =  document.getElementsByClassName('pofol-pop');
 var closeElements = document.getElementsByClassName('btn-close');
 for(var i = 0; i< tabElements.length; i++){
     tabElements[i].addEventListener('click', function(){
@@ -49,4 +49,30 @@ for(var i = 0; i< tabElements.length; i++){
 
 $(document).ready(function() {
   $("html, .pop-detail").niceScroll({cursorcolor:"#0D2040"});
+
+  /* portfolio animation */
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop() - $(".sa03-top").offset().top;
+
+    if (scrollTop >= -12 ) {
+      $(".sa03-bg-txt").css("top", scrollTop + 215);
+      $(".sa03-bg-txt").css(
+        "left",
+        `${
+          28 -
+          (scrollTop -12 ) * 0.08
+        }%`
+      );
+    }
+
+    $(".sa-vertical-trigger > li").each(function (index, item) {
+      if ($(window).scrollTop() >= $(this).offset().top) {
+        $(".sa03-bg").removeClass("trigger0");
+        $(".sa03-bg").removeClass("trigger1");
+        $(".sa03-bg").removeClass("trigger2");
+        $(".sa03-bg").removeClass("trigger3");
+        $(".sa03-bg").addClass(`trigger${index}`);
+      }
+    });
+  });
 });

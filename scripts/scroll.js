@@ -32,7 +32,7 @@ $(document).ready(function(){
     /* Info */
     var tlInfoScrollIn = new TimelineMax();
     tlInfoScrollIn
-    .to('.slide-tit01',0.5,{y: -120})
+    .to('.slide-tit01',0.7,{y: -120})
     .fromTo('.myinfo-cont',1,{opacity:0},{opacity: 1, ease:Power4.easeOut});
     var tlInfoScrollOut = new TimelineMax();
     tlInfoScrollOut
@@ -76,7 +76,7 @@ $(document).ready(function(){
 
     var tlPofolScrollIn = new TimelineMax();
     tlPofolScrollIn
-    .to('.slide-tit01',1,{y: -240})
+    .to('.slide-tit01',1.2,{y: -240})
     .to('.pofol-info',1,{opacity: 1, delay:1, ease:Power4.easeOut}, "-=1");
 
     var tlPofolScrollOut = new TimelineMax();
@@ -120,15 +120,15 @@ $(document).ready(function(){
     .addTo(controller);
 
     /* Skill */
-    var sceneSkill1 = new ScrollMagic.Scene({
-      triggerElement: '.skill-sec',
-      triggerHook: 'onEnter',
-      duration: '100%'
-    })
-    .setPin('.pofol-sec',{
-      pushFollowers:false
-    })
-    .addTo(controller);
+    // var sceneSkill1 = new ScrollMagic.Scene({
+    //   triggerElement: '.skill-sec',
+    //   triggerHook: 'onEnter',
+    //   duration: '100%'
+    // })
+    // .setPin('.pofol-sec',{
+    //   pushFollowers:false
+    // })
+    // .addTo(controller);
 
     /* List */
     var sceneList1 = new ScrollMagic.Scene({
@@ -136,7 +136,7 @@ $(document).ready(function(){
       triggerHook: 'onEnter',
       duration: '100%'
     })
-    .setPin('.skill-sec',{
+    .setPin('.pofol-sec',{
       pushFollowers:false
     })
     .addTo(controller);
